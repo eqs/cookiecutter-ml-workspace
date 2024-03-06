@@ -1,0 +1,14 @@
+requests
+numpy
+scipy
+pandas
+scikit-learn
+matplotlib
+ipython
+jupyter
+jupyterlab
+tensorboard
+tensorboardX
+torch
+torchvision
+torchaudio

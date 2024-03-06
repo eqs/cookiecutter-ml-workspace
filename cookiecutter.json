@@ -1,0 +1,11 @@
+{
+    "author_name": "Your Name",
+
+    "project_name": "awesome_machine_learning_project",
+    "project_description": "An awesome machine learning project.",
+
+    "use_cuda": true,
+
+    "jupyter_port": 9000,
+    "tensorboard_port": 9001
+}

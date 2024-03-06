@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+    lab:
+      build:
+        context: ./docker/
+        args:
+          user_id: "${UID}"
+          group_id: "${GID}"
+      user: "ubuntu"
+      command: bash /work/docker/docker-entrypoint.sh
+      ports:
+          - "${JUPYTER_PORT}:8888"
+          - "${TFBOARD_PORT}:6006"
+      volumes:
+          - .:/work
+{%- if cookiecutter.use_cuda %}
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [gpu]
+{%- endif %}
